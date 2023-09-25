@@ -152,7 +152,7 @@ def main():
             else:
                 st.warning("Por favor, extraiga el perfil primero.")
 
-        tipo_extraccion = st.selectbox("Seleccionar Tipo de Extracción:", ['default', 'delta', 'rango'], key='tipo_extraccion', value='delta')
+        tipo_extraccion = st.selectbox("Seleccionar Tipo de Extracción:", ['default', 'delta', 'rango'], key='tipo_extraccion')
         parametro_extra = None
 
         if tipo_extraccion != 'default':
