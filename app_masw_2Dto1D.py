@@ -157,7 +157,7 @@ def main():
 
         if tipo_extraccion != 'default':
             key = f"input_{tipo_extraccion}"
-            parametro_extra_str = st.text_input(f"Ingresar Parámetro para Extracción '{tipo_extraccion}':", key=key, value = 1)
+            parametro_extra_str = st.text_input(f"Ingresar Parámetro para Extracción '{tipo_extraccion}':", key=key)
             if parametro_extra_str: # Convert only if not empty
                 if tipo_extraccion == 'delta':
                     parametro_extra = float(parametro_extra_str)
