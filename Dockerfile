@@ -4,6 +4,9 @@ FROM python:3.8.12
 # Establecer un directorio de trabajo
 WORKDIR /app
 
+# Actualizar pip
+RUN pip install --upgrade pip
+
 # Copiar el archivo de requisitos e instalar las dependencias
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
