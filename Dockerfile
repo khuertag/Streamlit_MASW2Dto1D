@@ -6,10 +6,20 @@ WORKDIR /app
 
 # Actualizar pip
 RUN pip install --upgrade pip
+RUN pip install --upgrade pip setuptools
 
 # Copiar el archivo de requisitos e instalar las dependencias
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+#COPY requirements.txt .
+#RUN pip install --no-cache-dir -r requirements.txt
+
+# Instalar dependencias una por una
+RUN pip install streamlit
+RUN pip install scipy
+RUN pip install pandas
+RUN pip install matplotlib
+
+
+
 
 # Copiar el código de la aplicación en el contenedor
 COPY app_masw_2Dto1D.py .
