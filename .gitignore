@@ -155,4 +155,4 @@ cython_debug/
 
 # IGNORE CARPETAS
 **IGNORE
-*dockerimage
+dockerimage/
